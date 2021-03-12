@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Professional Profile</title>
+	{% load static %}
+	<style type="text/css">
+		.text-center{text-align:center;}
+		@page {
+			margin: 10mm; 
+			margin-header: 0mm; /* <any of the usual CSS values for margins> */
+			margin-footer: 0mm; /* <any of the usual CSS values for margins> */
+			background-image: url(/static/frontend/images/about.png);
+			@frame col1_frame { /* Content frame 1 */
+				-pdf-frame-content: sidebar;
+				left: 0pt; width: 185pt; top: 0pt; height: 100%;
+				background-color: #2e3191;
+			}
+			@frame col2_frame { /* Content frame 2 */
+				-pdf-frame-content: main;
+				left: 223pt; width: 345pt; top: 0pt; height: 100%;
+			}
+		}
+
+		body {
+			height: 100%;
+			padding: 10px;
+			margin:0;
+		}
+		h5{font-size: 14px;font-family: "bookos";padding: 0px;margin:8px 0 18px;text-transform: uppercase;}
+		h2{padding: 0px;margin:8px 0 10px;}
+
+		.btn-file {
+			position: relative;
+			overflow: hidden;
+			font-size: 30px;
+			color: #fff;
+			cursor: pointer;
+		}
+
+		.col-sm-4,.col-sm-8{
+			position: relative;
+			min-height: 1px;
+			display: inline;
+			padding-top: 50pt;
+		}
+
+		.card-header {
+			width: 100%;
+			padding: 10px 10px 0px 10px;
+			box-sizing: border-box;
+			border-radius: 3px;
+			display: block;
+			font-weight: bold;
+		}
+
+		.card-header-text {
+			display: block;
+		}
+
+		ul.sortable li:last-child {
+			margin-bottom: 0px;
+		}
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0px;
+		}
+
+		.text-row {
+			padding: 10px 6px;
+			margin: 0;
+			box-sizing: border-box;
+			border-radius: 3px;
+			cursor: pointer;
+			font-size: 12px;
+			white-space: normal;
+			line-height: 20px;
+			position: relative;
+			list-style: none!important;
+		}
+		p, span, a, div,h1, h2, h5{
+			font-family: "bookos";
+		}
+		.ui-sortable-placeholder {
+			visibility: inherit !important;
+			background: transparent;
+			border: #666 2px dashed;
+		}
+
+		.photo{
+			width: 190px;
+			height: 200px;
+			border: 7px solid #fff;
+		}
+
+		.dg-name{
+			color: #2e3190;
+			text-align: center;
+			margin-top: 30px;
+		}
+		.dg-expr{
+			color: #2e3190;
+			text-align: center;
+		}
+		.dg-left-under{
+			margin-top: 20px;
+			margin-left: 20px;
+			color:#222;
+		}
+		h2{border-bottom-width: 1px;}
+		.dg-contact{
+			text-align: left;
+			padding-left: 8px;
+		}
+		.li-under{
+			margin-left: 10px;
+		}
+		.dg-right-under{
+			margin-top: 10px;
+		}
+		.dg-name{
+			text-transform: capitalize;
+		}
+
+		.dg-left-under .text-row{border-bottom: 2px solid #fff;}
+		.dg-left-under .text-row:last-child{border-bottom-width: 0;}
+
+		.paragraph{margin-bottom: 16px;}
+		.cv-italic{font-style: italic;}
+
+	</style>
+</head>
+<body>
+	<div class="task-board">
+	<div class="row">
+		<div id="sidebar" class="dg-left-side col-sm-4 dg-blue">
+			<div>&nbsp;</div>
+			<div class="dg-photo">
+				<div class="previewer">
+					<img src="/static/frontend/images/bg1.jpg"/>
+				</div>	
+			</div>
+			
+			<div class="dg-left-under">
+				<ul class="sortable ui-sortable" id="sort1"  data-status-id="1">
+					<li class="text-row ui-sortable-handle">
+						<div class="dg-wrap">
+						<div class="dg-contact">
+							<div class="singlecolumn">
+								<div>
+									<span id="FIELD_HPHN" class="field">{{user.phone_number}}</span>
+								</div>
+								<div>
+									<span id="FIELD_EMAI" class="field">{{pro.user.email}}</span>
+								</div>
+								<div>
+									<span class="field">{{user.address1}}, {{user.address2}} {{user.city}} {{user.country}} {{user.zip_code}}</span>
+								</div>
+							</div>
+						</div>
+						</div>
+					</li>
+					<li class="skillPart" data-task-id="1">
+						<h5>Competences</h5>
+						<div class="li-under dg-wrap">
+							<div class="row">
+								<div class="skil-left col-sm-6">
+									<ul class="dg-skill-ul">
+										{% for eachcom in competence %}
+										<li>{{ eachcom.subject }}-{{ eachcom.level }}</li>
+										{% endfor %}
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="text-row ui-sortable-handle cv-cert">
+						<h5>Certifications</h5>						
+						<div class="li-under dg-wrap cv-modified">
+							
+						</div>
+					</li>
+				</ul>
+			   
+			</div>
+		</div>
+		<div id="main" class="dg-right-side col-sm-8">
+			<div>&nbsp;</div>
+			<div class="dg-right-under">
+				<div class="text-row ui-sortable-handle">
+						<span class="button dg-edit"><i class="fas fa-edit "></i></span>
+						<div class="dg-wrap">
+							<div class="dg-name">
+								<h2>{{ pro.user.first_name}}{{ pro.user.last_name}}</h2>
+							</div>
+						</div>
+				</div>
+				<ul class="sortable ui-sortable addablePart" id="sort2"  data-status-id="2">
+					<li class="text-row ui-sortable-handle summaryPart">
+						<h5>PROFESSIONAL SUMMARY</h5>
+						<div class="li-under dg-wrap">
+							{{ pro.overview}}
+						</div>
+						  
+					</li>
+					<li class="text-row ui-sortable-handle workHisPart" data-task-id="1">
+						<h5>WORK HISTORY</h5>
+						<div class="li-under dg-wrap">
+							<ul class="workhis ui-sortable" id="work4">
+								{% for eachexp in exp %}
+								<li class="text-row ui-sortable-handle">
+									<div class="singlecolumn">
+										<div class="cv-job-title">{{eachexp.job_title}}</div>
+										<div class="duration cv-italic cv-work-duration">
+										{{eachexp.start_date}} - {{eachexp.end_date}}
+										</div>
+										<div>
+											<span class="cv-work-employer">{{eachexp.company_name}}</span>
+											<span> - </span>
+											<span class="cv-work-city">{{eachexp.city}}</span>
+											<span>, </span>
+											<span class="cv-work-country">{{eachexp.country}}</span>
+										</div>
+										<div class="cv-work-detail dg-wrap cv-modified">
+											{{ eachexp.content }}
+										</div>
+									</div>
+								</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</li>
+					<li class="text-row ui-sortable-handle eduPart">
+						<h5>EDUCATION</h5>
+						<div class="li-under dg-wrap">
+							<ul class="edu-wrap ui-sortable" id="edu4">
+								{% for eachedu in edu %}
+								<li class="text-row ui-sortable-handle">
+									<div class="singlecolumn">
+										<div class="duration">
+										{{eachedu.start_date}} - {{eachedu.end_date}}
+										</div>
+										<div class="school">
+											{{ eachedu.diploma }}: {{ eachedu.school }}
+										</div>
+									</div>
+								</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</li>
+					
+					<li class="text-row ui-sortable-handle cv-acc">
+						<h5>Accomplishments</h5>
+						<div class="li-under dg-wrap cv-modified">
+							
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

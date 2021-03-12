@@ -1,0 +1,8 @@
+# release: python manage.py makemigrations
+# release: python manage.py migrate
+# worker: celery worker --app=briteleader
+# beat: celery beat --app=briteleader
+# web: gunicorn briteleader.wsgi
+# daphne briteleader.asgi:application
+web: daphne briteleader.asgi:application --port $PORT --bind 0.0.0.0 -v2
+worker: python manage.py runworker -v2

@@ -1,0 +1,333 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-03 15:36+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\booking\models.py:47 .\payment\models.py:171 .\subscription\models.py:19
+msgid "Created"
+msgstr ""
+
+#: .\booking\models.py:48 .\booking\models.py:67
+msgid "Ordering"
+msgstr ""
+
+#: .\booking\models.py:49 .\booking\models.py:68
+msgid "Ordered"
+msgstr ""
+
+#: .\booking\models.py:50 .\booking\models.py:69
+msgid "Offered"
+msgstr ""
+
+#: .\booking\models.py:51 .\booking\models.py:71
+msgid "Accepted"
+msgstr ""
+
+#: .\booking\models.py:52 .\booking\models.py:73 .\booking\models.py:74
+msgid "Inprogress"
+msgstr ""
+
+#: .\booking\models.py:53 .\booking\models.py:75
+msgid "Completed"
+msgstr ""
+
+#: .\booking\models.py:54 .\booking\models.py:76
+msgid "Rated"
+msgstr ""
+
+#: .\booking\models.py:55 .\booking\models.py:77
+msgid "Finished"
+msgstr ""
+
+#: .\booking\models.py:56 .\booking\models.py:78 .\payment\models.py:205
+msgid "Dispute"
+msgstr ""
+
+#: .\booking\models.py:57 .\booking\models.py:70
+msgid "Rejected"
+msgstr ""
+
+#: .\booking\models.py:58 .\booking\models.py:79 .\payment\models.py:31
+#: .\subscription\models.py:23
+msgid "Cancelled"
+msgstr ""
+
+#: .\booking\models.py:59
+msgid "Late_Cancellation"
+msgstr ""
+
+#: .\booking\models.py:60 .\booking\models.py:72 .\payment\models.py:170
+msgid "Paid"
+msgstr ""
+
+#: .\booking\models.py:61
+msgid "Unrated"
+msgstr ""
+
+#: .\booking\models.py:62
+msgid "Provider_Payment"
+msgstr ""
+
+#: .\booking\models.py:66
+msgid "created"
+msgstr ""
+
+#: .\booking\models.py:80
+msgid "Late_cancellation"
+msgstr ""
+
+#: .\booking\models.py:81
+msgid "UnRated"
+msgstr ""
+
+#: .\booking\models.py:82
+msgid "ProviderPayment"
+msgstr ""
+
+#: .\booking\models.py:86
+msgid "Not paid"
+msgstr ""
+
+#: .\booking\models.py:87 .\payment\models.py:28
+msgid "Authorized"
+msgstr ""
+
+#: .\booking\models.py:88
+msgid "Captured"
+msgstr ""
+
+#: .\booking\models.py:89
+msgid "Executed"
+msgstr ""
+
+#: .\booking\views.py:66
+msgid "You must be a seeker to access this page."
+msgstr ""
+
+#: .\booking\views.py:71
+msgid "You must be a provider to access this page."
+msgstr ""
+
+#: .\booking\views.py:85
+msgid "You do not have access to this page."
+msgstr ""
+
+#: .\booking\views.py:87
+msgid "You cannot edit this service"
+msgstr ""
+
+#: .\booking\views.py:102
+msgid "No available booking"
+msgstr ""
+
+#: .\myauth\templates\account\email\email_confirmation_message.txt:1
+#, python-format
+msgid ""
+"Hello from %(site_name)s!\n"
+"\n"
+"You're receiving this e-mail because user %(user_display)s has given yours "
+"as an e-mail address to connect their account.\n"
+"\n"
+"To confirm this is correct, go to %(frontend_link)s?key=%(key)s&username="
+"%(user_display)s&email=%(email)s\n"
+"\n"
+msgstr ""
+
+#: .\myauth\templates\account\email\email_confirmation_message.txt:8
+#, python-format
+msgid ""
+"Thank you from %(site_name)s!\n"
+"%(site_domain)s"
+msgstr ""
+
+#: .\myauth\templates\account\email\email_confirmation_subject.txt:3
+msgid "Please Confirm Your E-mail Address"
+msgstr ""
+
+#: .\myauth\templates\account\email\password_reset_key_message.txt:1
+#, python-format
+msgid ""
+"Hello from %(site_name)s!\n"
+"\n"
+"You're receiving this e-mail because you or someone else has requested a "
+"password for your user account.\n"
+"It can be safely ignored if you did not request a password reset. Click the "
+"link below to reset your password."
+msgstr ""
+
+#: .\myauth\templates\account\email\password_reset_key_message.txt:8
+#, python-format
+msgid "In case you forgot, your username is %(username)s."
+msgstr ""
+
+#: .\myauth\templates\account\email\password_reset_key_message.txt:10
+#, python-format
+msgid ""
+"Thank you for using %(site_name)s!\n"
+"%(site_domain)s"
+msgstr ""
+
+#: .\myauth\templates\account\email\password_reset_key_subject.txt:3
+msgid "Password Reset E-mail"
+msgstr ""
+
+#: .\myuser\models.py:10
+msgid "Female"
+msgstr ""
+
+#: .\myuser\models.py:11
+msgid "Male"
+msgstr ""
+
+#: .\myuser\models.py:14
+msgid "individual"
+msgstr ""
+
+#: .\myuser\models.py:15
+msgid "company"
+msgstr ""
+
+#: .\payment\models.py:26
+msgid "Unordered"
+msgstr ""
+
+#: .\payment\models.py:27 .\payment\models.py:141 .\payment\models.py:172
+#: .\payment\models.py:200
+msgid "Pending"
+msgstr ""
+
+#: .\payment\models.py:29 .\payment\models.py:142 .\payment\models.py:201
+msgid "Successful"
+msgstr ""
+
+#: .\payment\models.py:30 .\payment\models.py:143 .\payment\models.py:202
+#: .\subscription\models.py:21
+msgid "Failed"
+msgstr ""
+
+#: .\payment\models.py:34
+msgid "Credit_Card"
+msgstr ""
+
+#: .\payment\models.py:35
+msgid "Customer_Pay"
+msgstr ""
+
+#: .\payment\models.py:36
+msgid "PayPal"
+msgstr ""
+
+#: .\payment\models.py:37
+msgid "Online_Wallet"
+msgstr ""
+
+#: .\payment\models.py:38
+msgid "Undefined"
+msgstr ""
+
+#: .\payment\models.py:140 .\payment\models.py:199
+msgid "Onordered"
+msgstr ""
+
+#: .\payment\models.py:206
+msgid "Payment"
+msgstr ""
+
+#: .\provider\models.py:20
+msgid "User id of the provider"
+msgstr ""
+
+#: .\provider\models.py:22
+msgid "A boolean value that represents whether the provider is verified or not"
+msgstr ""
+
+#: .\provider\views.py:69
+msgid "You are not yet a provider"
+msgstr ""
+
+#: .\provider\views.py:231
+msgid "You must be a provider to access this route."
+msgstr ""
+
+#: .\provider\views.py:388
+msgid "Incomplete profile"
+msgstr ""
+
+#: .\provider\views.py:391
+msgid "You can't edit these documents after verification"
+msgstr ""
+
+#: .\provider\views.py:393
+msgid "You can't edit these documents because verification is pending"
+msgstr ""
+
+#: .\seleo\settings.py:45
+msgid "French"
+msgstr ""
+
+#: .\seleo\settings.py:46
+msgid "English"
+msgstr ""
+
+#: .\seleo\settings.py:47
+msgid "Spanish"
+msgstr ""
+
+#: .\seleo\settings.py:48
+msgid "Portuguese"
+msgstr ""
+
+#: .\subscription\models.py:19
+msgid "cancelled"
+msgstr ""
+
+#: .\subscription\models.py:19
+msgid "not_created"
+msgstr ""
+
+#: .\subscription\models.py:21 .\subscription\models.py:23
+msgid "Activated"
+msgstr ""
+
+#: .\subscription\models.py:21 .\subscription\models.py:23
+msgid "Unactivated"
+msgstr ""
+
+#: .\subscription\models.py:24
+msgid "Month"
+msgstr ""
+
+#: .\subscription\models.py:24
+msgid "year"
+msgstr ""
+
+#: .\subscription\views.py:94
+msgid "This subscription is already active"
+msgstr ""
+
+#: .\wallet\views.py:113
+msgid "Account already exists"
+msgstr ""
+
+#: .\wallet\views.py:118
+msgid "Country field is mandatory"
+msgstr ""
+
+#: .\wallet\views.py:133
+msgid "You cannot access this resources"
+msgstr ""

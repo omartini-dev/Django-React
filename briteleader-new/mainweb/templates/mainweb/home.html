@@ -1,0 +1,86 @@
+{% extends 'mainweb/base.html' %}
+{% load mathfilters %}
+
+{% block title %}
+    Booking confirmation
+{% endblock %}
+
+{% block header %}Booking confirmation{% endblock %}
+
+{% block content %}
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" class="wrapper" bgcolor="#ffffff">
+        <tr>
+            <td align="center" valign="top">
+                <table width="600" cellpadding="0" cellspacing="0" border="0" class="container">
+                    <tr>
+                        <td align="left" valign="top" style="padding: 10px">
+                            <h3>
+                                <span style='font-size:30px;'>&#128516;</span> Hey {{ booking.seeker.user.first_name }},
+                            </h3>
+                            <p>
+                                Your booking with <span style="text-transform: uppercase">{{booking.provider.user.first_name}}</span> is now <span style="text-transform: uppercase; color: green; text-decoration: underline">confirmed</span>.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" class="wrapper" bgcolor="#ffffff">
+        <tr>
+            <td align="center" valign="top">
+                <table width="600" cellpadding="0" cellspacing="0" border="0" class="container">
+                    <tbody>
+                        <tr>
+                            <td style="text-align: left; width: 50%"><p><strong>Service Booked:</strong></p></td>
+                            <td style="text-align: left; width: 50%"><p>{{booking.service_provider.service.category}} /
+                                                {{booking.service_provider.service.group}} /
+                                                {{booking.service_provider.service.type}} /
+                                                {{booking.service_provider.service.variant}} /
+                                                {{booking.service_provider.service.title}}
+                                  </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; width: 50%"><p><strong>Date and Time:</strong></p></td>
+                            <td style="text-align: left; width: 50%"><p>{{booking.time_of_service}}</p></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; width: 50%"><p><strong>Duration:</strong></p></td>
+                            <td style="text-align: left; width: 50%"><p>{{booking.bookingprice.service_quantity}}</p></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; width: 50%"><p><strong>Location :</strong></p></td>
+                            <td style="text-align: left; width: 50%"><p> {{booking.location }}</p></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; width: 50%"><p><strong>Service Provider:</strong></p></td>
+                            <td style="text-align: left; width: 50%"><p>{{booking.provider.user.first_name}} {{ booking.provider.user.userprofile.last_name_short }}</p></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; width: 50%"><p><strong>Amount :</strong></p></td>
+                            <td style="text-align: left; width: 50%"><p>{{ booking.bookingprice.currency }} {{booking.bookingprice.booking_price_round}}</p></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; width: 50%"> <p><strong>Free cancellation until:</strong></p></td>
+                            <td style="text-align: left; width: 50%"><p style="color: green">{{booking.free_cancellation_expires_at }}</p></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+
+
+
+
+{% endblock %}
+
+{% block important_notice_providers %}
+{% endblock %}
+
+{% block subscription_promo %}
+{% endblock %}

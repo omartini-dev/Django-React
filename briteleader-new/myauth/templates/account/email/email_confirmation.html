@@ -1,0 +1,88 @@
+{% extends 'mainweb/base.html' %}
+
+
+{% block title %}
+    Email Confirmation
+{% endblock %}
+
+{% block header %}Email confirmation{% endblock %}
+
+{% block content %}
+
+
+        <table width="640" cellpadding="0" cellspacing="0" border="0" class="wrapper" bgcolor="#FFFFFF">
+
+            <tr>
+              <td align="center" valign="top">
+
+                <table width="600" cellpadding="0" cellspacing="0" border="0" class="container">
+                  <tr>
+                    <td align="center" valign="top">
+                        <h3>Greetings {{user.first_name }}, welcome to BriteLeader Aviation Consulting</h3> .
+                    </td>
+                  </tr>
+                </table>
+
+              </td>
+            </tr>
+
+        </table>
+        <table width="100%" cellpadding="0" cellspacing="0" border="0" class="wrapper" bgcolor="#FFFFFF" style="border: 2px solid lightgrey">
+
+            <tr>
+              <td align="center" valign="top">
+
+                <table width="600" cellpadding="0" cellspacing="0" border="0" class="container">
+                  <tr>
+                    <td align="center" valign="top">
+                        <h4> Please click on the button below to confirm your email address</h4>
+                    </td>
+                  </tr>
+
+                </table>
+                <table width="600" border="0" cellspacing="0" cellpadding="0" class="container">
+                  <tr>
+                    <td>
+                      <table border="0" cellspacing="0" cellpadding="0" align="center">
+                        <tr>
+                          <td bgcolor="green" style="padding: 12px 18px 12px 18px; border-radius:3px" align="center">
+                              <a href="{{ frontend_link }}?key={{ key }}&username={{ user_display }}&email={{email}}" target="_blank" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; font-weight: normal; color: #ffffff; text-decoration: none; display: inline-block;">Verify Email &rarr;</a></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table width="600" border="0" cellspacing="0" cellpadding="0" class="container">
+                  <tr>
+                    <td>
+                      <table border="0" cellspacing="0" cellpadding="0" align="center">
+                        <tr>
+                          <td height="30" style="font-size:14px; line-height:30px;" align="center">
+                             <h6>Can't click the button above? Copy and paste this link into your browser
+                            <br>
+                            {{ frontend_link }}?key={{ key }}&username={{ user_display }}&email={{email}}
+                             </h6>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+        </table>
+
+
+
+
+
+{% endblock %}
+
+{% block important_notice_providers %}
+{% endblock %}
+{% block important_notice_seekers %}
+{% endblock %}
+{% block subscription_promo %}
+{% endblock %}
+

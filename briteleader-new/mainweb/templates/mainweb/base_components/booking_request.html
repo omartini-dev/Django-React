@@ -1,0 +1,122 @@
+{% extends 'mainweb/base.html' %}
+
+{% block title %}
+    Booking request
+{% endblock %}
+
+{% block header %}Booking request{% endblock %}
+
+{% block content %}
+
+        <table width="640" cellpadding="0" cellspacing="0" border="0" class="wrapper" bgcolor="#FFFFFF">
+
+            <tr>
+              <td align="center" valign="top">
+
+                <table width="600" cellpadding="0" cellspacing="0" border="0" class="container">
+                  <tr>
+                      {% for booking in bookings %}
+                    <td align="left" valign="top" style="padding: 10px">
+                        <h3>Hi {{ booking.seeker_name }} have a booking request</h3>
+                    </td>
+                  </tr>
+                </table>
+
+              </td>
+            </tr>
+
+        </table>
+
+        <table width="640" cellpadding="0" cellspacing="0" border="0" class="wrapper" bgcolor="#efeded">
+            <tr>
+              <td height="10" style="font-size:10px; line-height:10px;">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="center" valign="top">
+
+                <table width="600" cellpadding="0" cellspacing="0" border="0" class="container">
+                  <tr>
+                    <td width="300" class="mobile" align="left" valign="top">
+                      <p><strong>Service Requested:</strong></p>
+                    </td>
+                    <td width="300" class="mobile" align="right" valign="top">
+                      <p>{{booking.service_provider.service.category}} >
+                                    {{booking.service_provider.service.group}} >
+                                    {{booking.service_provider.service.type}} >
+                                    {{booking.service_provider.service.variant}} >
+                                    {{booking.service_provider.service.title}}
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+                <table width="600" cellpadding="0" cellspacing="0" border="0" class="container">
+                  <tr>
+                    <td width="300" class="mobile" align="left" valign="top">
+                      <p><strong>Date and Time:</strong></p>
+                    </td>
+                    <td width="300" class="mobile" align="right" valign="top">
+                      <p>{{booking.time_of_service}}</p>
+                    </td>
+                  </tr>
+                </table>
+                <table width="600" cellpadding="0" cellspacing="0" border="0" class="container">
+                  <tr>
+                    <td width="300" class="mobile" align="left" valign="top">
+                      <p><strong>Duration:</strong></p>
+                    </td>
+                    <td width="300" class="mobile" align="right" valign="top">
+                      <p>{{booking.duration_of_service}} {{booking.service_provider_object.fee_duration_plural}}</p>
+                    </td>
+                  </tr>
+                </table>
+                <table width="600" cellpadding="0" cellspacing="0" border="0" class="container">
+                  <tr>
+                    <td width="300" class="mobile" align="left" valign="top">
+                      <p><strong>Location :</strong></p>
+                    </td>
+                    <td width="300" class="mobile" align="right" valign="top">
+                      <p> {{booking.seeker.user.profile.address_1}} ,
+                          {{booking.seeker.user.profile.address_2}} ,
+                          {{booking.seeker.user.profile.city}} ,
+                          {{booking.seeker.user.profile.country}}
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+                <table width="600" cellpadding="0" cellspacing="0" border="0" class="container">
+                  <tr>
+                    <td width="300" class="mobile" align="left" valign="top">
+                      <p><strong>Client name:</strong></p>
+                    </td>
+                    <td width="300" class="mobile" align="right" valign="top">
+                      <p>{{booking.seeker_name}}</p>
+                    </td>
+                  </tr>
+                </table>
+                <table width="600" cellpadding="0" cellspacing="0" border="0" class="container">
+                  <tr>
+                    <td width="300" class="mobile" align="left" valign="top">
+                      <p><strong>You will receive:</strong></p>
+                    </td>
+                    <td width="300" class="mobile" align="right" valign="top">
+                      <p>{{booking.service_provider.user.subscription.provider_fee}}</p>
+                    </td>
+                  </tr>
+                </table>
+                        {% endfor %}
+
+              </td>
+            </tr>
+            <tr>
+              <td height="10" style="font-size:10px; line-height:10px;">&nbsp;</td>
+            </tr>
+        </table>
+
+
+{% endblock %}
+
+{% block important_notice_seekers %}
+{% endblock %}
+
+{% block become_provider %}
+{% endblock %}

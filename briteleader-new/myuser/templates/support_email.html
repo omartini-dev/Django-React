@@ -1,0 +1,89 @@
+{% extends 'mainweb/base.html' %}
+
+
+{% block title %}
+   Information request
+{% endblock %}
+
+{% block header %}Information request{% endblock %}
+
+{% block content %}
+
+        <table width="100%" cellpadding="0" cellspacing="0" border="0" class="wrapper" bgcolor="#FFFFFF">
+            <tr>
+              <td align="center" valign="top">
+                <table width="600" cellpadding="0" cellspacing="0" border="0" class="container">
+                  <tr>
+                    <td align="left" valign="top">
+                        <h3>Dear Admin</h3>
+                    </td>
+                  </tr>
+                  <tr>
+                      <td height="10" style="font-size:10px; line-height:10px;">&nbsp;</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+        </table>
+        <table width="100%" cellpadding="0" cellspacing="0" border="0" class="wrapper" bgcolor="#FFFFFF" style="margin-bottom: 20px">
+            <tr>
+                <td height="10" style="font-size:10px; line-height:10px;">&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="center" valign="top">
+                    <table width="600" cellpadding="0" cellspacing="0" class="container" style="border: 1px solid">
+                       <thead>
+                            <tr>
+                                <th style="border-right: 1px solid;padding-top: 10px; padding-bottom: 10px">Sender</th>
+                                <th style="padding-top: 10px; padding-bottom: 10px">Topic</th>
+                            </tr>
+                       </thead>
+                       <tbody align="center" style="border: 1px solid">
+                            <tr>
+                                <td style="border-right: 1px solid;padding-top:20px; padding-bottom: 20px" >{{ data.email }}</td>
+                                <td style="padding-top:20px; padding-bottom: 20px">{{ data.topic }}</td>
+                            </tr>
+                       </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td height="20"></td>
+            </tr>
+        </table>
+        <table width="100%" cellpadding="0" cellspacing="0" border="0" class="wrapper" bgcolor="#FFFFFF">
+            <tr>
+              <td align="center" valign="top">
+                <table width="600" cellpadding="0" cellspacing="0" border="0" class="container">
+                  <tr>
+                    <td align="left" valign="top"><strong>Message:</strong></td>
+                  </tr>
+                  <tr>
+                      <td height="10"></td>
+                  </tr>
+                  <tr>
+                      <td>{{ data.message }}</td>
+                  </tr>
+                  <tr>
+                      <td height="10" style="font-size:10px; line-height:10px;">&nbsp;</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+        </table>
+
+
+{% endblock %}
+
+{% block make_bookings %}
+{% endblock %}
+{% block become_provider%}
+{% endblock %}
+{% block important_notice_providers %}
+{% endblock %}
+{% block important_notice_seekers %}
+{% endblock %}
+{% block subscription_promo %}
+{% endblock %}
+
+

@@ -1,0 +1,7 @@
+Requirement already satisfied: xhtml2pdf in /var/www/python3/myenv/lib/python3.6/site-packages
+Requirement already satisfied: Pillow in /var/www/python3/myenv/lib/python3.6/site-packages (from xhtml2pdf)
+Requirement already satisfied: html5lib>=1.0 in /var/www/python3/myenv/lib/python3.6/site-packages (from xhtml2pdf)
+Requirement already satisfied: pyPdf2 in /var/www/python3/myenv/lib/python3.6/site-packages (from xhtml2pdf)
+Requirement already satisfied: reportlab>=3.0 in /var/www/python3/myenv/lib/python3.6/site-packages (from xhtml2pdf)
+Requirement already satisfied: six in /var/www/python3/myenv/lib/python3.6/site-packages (from xhtml2pdf)
+Requirement already satisfied: webencodings in /var/www/python3/myenv/lib/python3.6/site-packages (from html5lib>=1.0->xhtml2pdf)
